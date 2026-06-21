@@ -1,0 +1,831 @@
+/* ====================================
+   GOOGLE FONT
+==================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ====================================
+   RESET
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ====================================
+   VARIABLES
+==================================== */
+
+:root{
+
+    --primary:#8b5cf6;
+    --secondary:#6366f1;
+
+    --dark:#020617;
+    --card:#111827;
+
+    --text:#f8fafc;
+    --muted:#cbd5e1;
+
+    --glass:
+    rgba(255,255,255,0.05);
+
+    --border:
+    rgba(255,255,255,0.08);
+
+    --shadow:
+    0 20px 40px rgba(0,0,0,0.3);
+
+}
+
+/* ====================================
+   BODY
+==================================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+
+    radial-gradient(
+    circle at top left,
+    rgba(139,92,246,0.15),
+    transparent 30%
+    ),
+
+    radial-gradient(
+    circle at bottom right,
+    rgba(99,102,241,0.15),
+    transparent 30%
+    ),
+
+    #020617;
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+/* ====================================
+   TECH GRID
+==================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+    rgba(255,255,255,0.04) 1px,
+    transparent 1px
+    ),
+
+    linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 1px,
+    transparent 1px
+    );
+
+    background-size:40px 40px;
+
+    z-index:-1;
+
+}
+
+/* ====================================
+   NAVBAR
+==================================== */
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+    rgba(2,6,23,0.85);
+
+    backdrop-filter:
+    blur(14px);
+
+    border-bottom:
+    1px solid var(--border);
+
+}
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:18px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-weight:500;
+
+    transition:0.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ====================================
+   DARK MODE BUTTON
+==================================== */
+
+#theme-toggle{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+#theme-toggle:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ====================================
+   HEADER
+==================================== */
+
+header{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+header h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+/* ====================================
+   MAIN
+==================================== */
+
+main{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+/* ====================================
+   HERO
+==================================== */
+
+.hero{
+
+    min-height:80vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero-content h3{
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+
+    margin-bottom:10px;
+
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    color:var(--muted);
+
+    max-width:600px;
+
+    margin-bottom:30px;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:380px;
+
+    height:380px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:0.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ====================================
+   BUTTONS
+==================================== */
+
+.btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    margin-right:15px;
+
+    transition:0.3s;
+
+}
+
+.btn-primary{
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+
+    color:white;
+
+}
+
+.btn-secondary{
+
+    border:1px solid var(--border);
+
+    color:white;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(139,92,246,.3);
+
+}
+
+/* ====================================
+   SOCIAL LINKS
+==================================== */
+
+.social-links{
+
+    margin-top:30px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.social-links a{
+
+    color:var(--muted);
+
+    font-size:1.3rem;
+
+    transition:0.3s;
+
+}
+
+.social-links a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ====================================
+   GLASS SECTIONS
+==================================== */
+
+section{
+
+    margin:40px 0;
+
+    padding:35px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+section h2{
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+
+}
+
+/* ====================================
+   SKILLS GRID
+==================================== */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.skill-card{
+
+    background:
+    rgba(255,255,255,0.03);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    transition:0.3s;
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ====================================
+   PROJECT CARDS
+==================================== */
+
+.project-card{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:30px;
+
+}
+
+.project-card img{
+
+    width:320px;
+
+    border-radius:20px;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.project-info{
+
+    flex:1;
+
+}
+
+/* ====================================
+   TECH STACK
+==================================== */
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.tech-stack li{
+
+    list-style:none;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    background:
+    rgba(139,92,246,.15);
+
+    color:white;
+
+}
+
+/* ====================================
+   PROJECT BUTTONS
+==================================== */
+
+.project-links{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ====================================
+   FORM
+==================================== */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+input,
+textarea{
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:
+    rgba(255,255,255,.04);
+
+    color:white;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+}
+
+/* ====================================
+   SOCIAL CARDS
+==================================== */
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.social-grid a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+    transition:0.3s;
+
+}
+
+.social-grid a:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ====================================
+   TIMELINE
+==================================== */
+
+.timeline{
+
+    list-style:none;
+
+    position:relative;
+
+    margin-top:20px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:8px;
+
+    width:3px;
+
+    height:100%;
+
+    background:var(--primary);
+
+}
+
+.timeline li{
+
+    position:relative;
+
+    padding-left:35px;
+
+    margin-bottom:25px;
+
+}
+
+.timeline li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:5px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:var(--muted);
+
+    margin-top:50px;
+
+}
+
+/* ====================================
+   DARK MODE
+==================================== */
+
+body.dark-mode{
+
+    background:#000814;
+
+}
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media(max-width:900px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding-top:40px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:3rem;
+
+    }
+
+    .project-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .project-card img{
+
+        width:100%;
+
+        max-width:350px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    nav ul{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+
+.social-grid h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.social-grid p{
+
+    color:var(--muted);
+
+}
+
+.social-grid a{
+
+    display:block;
+
+}
+
+/*page header*/
+.page-header{
+
+    text-align:center;
+
+    padding:60px 20px 30px;
+
+}
+
+.page-header h1{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.page-header p{
+
+    color:var(--muted);
+
+    max-width:600px;
+
+    margin:auto;
+
+}
