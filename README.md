@@ -83,11 +83,11 @@ AI-powered clinical trial recruitment platform designed to simplify patient-tria
 
 Portfolio:
 
-YOUR_PORTFOLIO_LINK
+https://leafy-klepon-f283b8.netlify.app/
 
 AyuTrials:
 
-YOUR_AYUTRIALS_LINK
+https://legendary-muffin-12ab62.netlify.app/
 
 ---
 
